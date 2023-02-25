@@ -21,16 +21,16 @@ import io.jsonwebtoken.*;
 public class JwtUtils {
   private static final Logger logger = LoggerFactory.getLogger(JwtUtils.class);
 
-  @Value("${bezkoder.app.jwtSecret}")
+  @Value("${makrem.app.jwtSecret}")
   private String jwtSecret;
 
-  @Value("${bezkoder.app.jwtExpirationMs}")
+  @Value("${makrem.app.jwtExpirationMs}")
   private int jwtExpirationMs;
 
-  @Value("${bezkoder.app.jwtCookieName}")
+  @Value("${makrem.app.jwtCookieName}")
   private String jwtCookie;
   
-  @Value("${bezkoder.app.jwtRefreshCookieName}")
+  @Value("${makrem.app.jwtRefreshCookieName}")
   private String jwtRefreshCookie;
 
   public ResponseCookie generateJwtCookie(UserDetailsImpl userPrincipal) {
